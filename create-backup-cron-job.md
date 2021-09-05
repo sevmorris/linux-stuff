@@ -5,7 +5,8 @@ mkdir /location/for/backups
 ```
 <br>
 
-**Create a script for backing up automatically**
+**Create a script for backing up automatically**<br>
+Remember to change BACKUP_DIR path
 
 ```
 #!/bin/bash
@@ -86,3 +87,4 @@ Add a line to schedule the job
 | ----------- Hour (0 - 23)
 ------------- Minute (0 - 59)
 ```
+<br><br>
