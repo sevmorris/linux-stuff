@@ -13,8 +13,8 @@ Remember to change BACKUP_DIR path
 DATE=$(date +%d-%m-%Y)
 BACKUP_DIR=”/location/for/backups”
 
-# Delete files older than 10 days #
-find $BACKUP_DIR/* -mtime +10 -exec rm {} \;
+# Delete files older than 1 hour
+find $BACKUP_DIR/* -mmin +60 -exec rm {} \;
 ```
 <br>
 
@@ -44,10 +44,10 @@ crontab -e
 ```
 
 Add a line to schedule the job
-(This example run every day at noon)
+(This example runs every ten minutes)
 
 ```
-0 12 * * * /bin/bup-script.sh
+*/10 * * * * /bin/bup-script.sh
 ```
 <br>
 ***
